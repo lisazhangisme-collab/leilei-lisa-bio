@@ -3,163 +3,277 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>蕾蕾Lisa｜个人介绍</title>
+  <title>蕾蕾Lisa｜品牌出海操盘手</title>
+  <meta name="description" content="蕾蕾Lisa，10年DTC品牌独立站操盘手，聚焦ebikes赛道、EDM邮件营销、Facebook小组增长与欧美本土化品牌营销。" />
   <style>
     :root {
-      --bg: #f4f5f7;
-      --card: #ffffff;
-      --text: #111827;
-      --sub: #6b7280;
-      --brand: #e11d48;
-      --line: #e5e7eb;
+      --bg: #070b14;
+      --bg-soft: #0f172a;
+      --card: rgba(255, 255, 255, 0.08);
+      --card-strong: rgba(255, 255, 255, 0.12);
+      --line: rgba(255, 255, 255, 0.14);
+      --text: #f8fafc;
+      --sub: #cbd5e1;
+      --brand: #7c3aed;
+      --brand-2: #ec4899;
+      --ok: #22c55e;
+      --shadow: 0 20px 60px rgba(2, 6, 23, .55);
     }
 
     * { box-sizing: border-box; }
 
-    body {
+    html, body {
       margin: 0;
-      background: var(--bg);
+      min-height: 100%;
+      background: radial-gradient(1200px 800px at 20% -10%, rgba(124,58,237,.35), transparent 60%),
+                  radial-gradient(900px 600px at 100% 10%, rgba(236,72,153,.25), transparent 55%),
+                  var(--bg);
       color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
-      line-height: 1.7;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Microsoft YaHei", sans-serif;
     }
 
-    .phone-frame {
-      max-width: 430px;
+    .container {
+      width: min(100%, 460px);
       margin: 0 auto;
-      min-height: 100vh;
-      background: var(--bg);
-      padding: 14px 12px 24px;
+      padding: 18px 14px 26px;
     }
 
-    .top {
-      padding: 10px 6px 12px;
-      font-size: 13px;
-      color: var(--sub);
-    }
-
-    .card {
-      background: var(--card);
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border-radius: 24px;
+      padding: 20px 18px 18px;
+      background:
+        linear-gradient(145deg, rgba(124,58,237,.25), rgba(236,72,153,.22)),
+        rgba(15, 23, 42, .65);
       border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 18px 16px;
-      box-shadow: 0 6px 18px rgba(0,0,0,.05);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+    }
+
+    .glow {
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border-radius: 999px;
+      filter: blur(30px);
+      opacity: .45;
+      pointer-events: none;
+    }
+
+    .glow.a { background: #7c3aed; top: -65px; right: -40px; }
+    .glow.b { background: #ec4899; bottom: -70px; left: -55px; }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 11px;
+      border: 1px solid rgba(255,255,255,.24);
+      border-radius: 999px;
+      font-size: 12px;
+      color: #e2e8f0;
+      background: rgba(15, 23, 42, .45);
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--ok);
+      box-shadow: 0 0 0 6px rgba(34,197,94,.16);
+      flex: 0 0 auto;
     }
 
     h1 {
-      margin: 0 0 12px;
-      font-size: 24px;
-      line-height: 1.35;
+      margin: 14px 0 8px;
+      font-size: 34px;
+      line-height: 1.08;
+      letter-spacing: .2px;
+      font-weight: 800;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: var(--sub);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .punch {
+      margin-top: 14px;
+      padding: 13px 14px;
+      border-radius: 14px;
+      background: rgba(15,23,42,.58);
+      border: 1px solid rgba(255,255,255,.15);
+      font-size: 14px;
+      line-height: 1.65;
+      color: #f1f5f9;
+    }
+
+    .punch strong {
+      color: #fff;
+      background: linear-gradient(90deg, #c4b5fd, #f9a8d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .grid {
+      display: grid;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .card {
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: var(--card);
+      backdrop-filter: blur(8px);
+      padding: 15px 14px;
+      box-shadow: 0 10px 28px rgba(2,6,23,.35);
+    }
+
+    .card h2 {
+      margin: 0 0 8px;
+      font-size: 16px;
       letter-spacing: .2px;
     }
 
-    h2 {
-      margin: 18px 0 8px;
-      font-size: 17px;
-      line-height: 1.4;
-    }
-
-    p {
-      margin: 8px 0;
-      font-size: 15px;
-    }
-
-    ul {
-      margin: 8px 0 0;
-      padding-left: 18px;
-    }
-
-    li {
-      margin: 6px 0;
-      font-size: 15px;
-    }
-
-    .lead {
+    .card p {
+      margin: 0;
       color: var(--sub);
       font-size: 14px;
-      margin-bottom: 10px;
+      line-height: 1.72;
     }
 
-    .quote {
-      margin: 12px 0;
-      padding: 10px 12px;
-      border-left: 3px solid var(--brand);
-      background: #fff1f2;
-      border-radius: 10px;
+    .skills {
+      margin-top: 10px;
+      display: grid;
+      gap: 9px;
+    }
+
+    .skill {
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 14px;
+      padding: 10px 11px;
+      background: rgba(15,23,42,.45);
+    }
+
+    .skill b {
+      display: block;
       font-size: 14px;
+      margin-bottom: 4px;
     }
 
-    .badge {
-      display: inline-block;
-      margin-top: 8px;
-      padding: 5px 10px;
-      border-radius: 999px;
-      background: #ffe4ea;
-      color: #9f1239;
-      font-size: 12px;
-      font-weight: 600;
+    .skill span {
+      display: block;
+      color: var(--sub);
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    .tagline {
+      margin-top: 12px;
+      padding: 11px 12px;
+      border-radius: 12px;
+      border: 1px dashed rgba(255,255,255,.24);
+      color: #e2e8f0;
+      font-size: 13px;
+      line-height: 1.65;
     }
 
     .cta {
-      margin-top: 16px;
-      border-top: 1px dashed var(--line);
-      padding-top: 14px;
+      margin-top: 15px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .btn {
+      appearance: none;
+      border: none;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 12px;
+      padding: 12px 14px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .2px;
+      cursor: default;
+    }
+
+    .btn.primary {
+      color: #fff;
+      background: linear-gradient(90deg, var(--brand), var(--brand-2));
+      box-shadow: 0 10px 24px rgba(124,58,237,.36);
+    }
+
+    .btn.secondary {
+      color: #e2e8f0;
+      background: rgba(15,23,42,.6);
+      border: 1px solid rgba(255,255,255,.2);
     }
 
     .footer {
-      text-align: center;
-      font-size: 12px;
-      color: var(--sub);
       margin-top: 14px;
-      padding-bottom: 6px;
+      text-align: center;
+      color: #94a3b8;
+      font-size: 12px;
+      line-height: 1.6;
+      padding-bottom: 8px;
     }
   </style>
 </head>
 <body>
-  <main class="phone-frame">
-    <div class="top">手机预览版 · 个人介绍页</div>
+  <main class="container">
+    <section class="hero">
+      <div class="glow a"></div>
+      <div class="glow b"></div>
 
-    <section class="card">
-      <h1>欢迎大家完整认识一下蕾蕾Lisa</h1>
-      <p class="lead">10年品牌独立站操盘手｜DTC品牌营销｜欧美本土化增长</p>
+      <div class="chip"><span class="dot"></span>WELCOME · 个人品牌主页</div>
+      <h1>蕾蕾<span style="opacity:.9;">Lisa</span></h1>
+      <p class="subtitle">10年品牌独立站操盘手｜DTC品牌营销体系｜欧美本土化增长</p>
 
-      <p>你好呀，我是蕾蕾Lisa。</p>
-      <p>过去10年，我一直在一线做品牌独立站，聚焦DTC品牌营销体系，擅长欧美本土化品牌增长。</p>
-
-      <div class="quote">把中国好产品，变成海外用户愿意长期复购的品牌。</div>
-
-      <h2>我主要在做什么</h2>
-      <p>我深耕ebikes赛道10年，从定位到增长，从首购到复购，长期做实战操盘。</p>
-      <ul>
-        <li><strong>EDM邮件营销体系</strong>：打造可持续复购链路，而不是一次性促销。</li>
-        <li><strong>用户运营洞察</strong>：从评论、行为、反馈中识别真实需求与决策阻力。</li>
-        <li><strong>Facebook小组营销</strong>：让用户从购买者升级为品牌共创者。</li>
-      </ul>
-
-      <h2>我的方法论</h2>
-      <p>我不做爆单玄学，更重视长期主义。</p>
-      <ul>
-        <li>清晰定位</li>
-        <li>稳定内容</li>
-        <li>用户关系</li>
-        <li>节奏执行</li>
-      </ul>
-
-      <h2>我相信的一件事</h2>
-      <p>真正有效的出海，不是把广告投出去，而是把品牌种进用户心里。</p>
-      <p>从第一次触达到多次复购，靠的是系统，不是运气。</p>
-
-      <h2>关于我自己</h2>
-      <p>我是妈妈，更是我自己。</p>
-      <p>我会持续分享真实操盘经验，也会把踩过的坑讲清楚，帮更多人少走弯路。</p>
-      <span class="badge">公众号：#蕾蕾跨境笔记</span>
-
-      <div class="cta">
-        <p>如果你也在做品牌出海，欢迎关注我，听我唠唠嗑。</p>
-      </div>
+      <div class="punch">你好，我是蕾蕾Lisa。<strong>我做的不是流量游戏，而是复购系统。</strong><br/>把中国好产品，变成海外用户愿意长期选择的品牌。</div>
     </section>
 
-    <div class="footer">Leilei Lisa · Bio Mobile Preview</div>
+    <section class="grid">
+      <article class="card">
+        <h2>我在做什么</h2>
+        <p>深耕 ebikes 品牌操盘 10 年，长期专注从首购到复购的增长闭环，覆盖独立站、内容、私域与用户运营体系。</p>
+        <div class="skills">
+          <div class="skill">
+            <b>EDM 邮件营销体系</b>
+            <span>设计自动化生命周期，让邮件不只促销，而是持续经营关系与复购。</span>
+          </div>
+          <div class="skill">
+            <b>用户洞察与运营</b>
+            <span>从评论、行为、反馈中识别真实决策点，找到用户愿意买单的核心价值。</span>
+          </div>
+          <div class="skill">
+            <b>Facebook 小组增长</b>
+            <span>搭建高粘性社群，让用户从购买者升级为品牌传播者与共创者。</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>我的方法论</h2>
+        <p>不追爆单神话，做可复制的长期增长：定位清晰、内容稳定、关系经营、节奏执行。</p>
+        <div class="tagline">真正有效的出海，不是把广告投出去，而是把品牌种进用户心里。</div>
+      </article>
+
+      <article class="card">
+        <h2>我的另一面</h2>
+        <p>我是妈妈，更是我自己。<br/>我分享真实操盘经验，也分享踩坑复盘，希望帮你把品牌出海走得更稳、更长久。</p>
+        <div class="cta">
+          <div class="btn primary">公众号：#蕾蕾跨境笔记</div>
+          <div class="btn secondary">欢迎关注我，听我唠唠嗑</div>
+        </div>
+      </article>
+    </section>
+
+    <div class="footer">Leilei Lisa · DTC Brand Growth · 2026</div>
   </main>
 </body>
 </html>

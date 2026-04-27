@@ -4,271 +4,247 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>蕾蕾Lisa｜品牌出海操盘手</title>
-  <meta name="description" content="蕾蕾Lisa，10年DTC品牌独立站操盘手，聚焦ebikes赛道、EDM邮件营销、Facebook小组增长与欧美本土化品牌营销。" />
+  <meta name="description" content="蕾蕾Lisa，10年DTC品牌独立站操盘手，深耕ebikes品牌操盘、EDM邮件营销、Facebook小组增长与欧美本土化品牌营销。" />
   <style>
     :root {
-      --bg: #070b14;
-      --bg-soft: #0f172a;
-      --card: rgba(255, 255, 255, 0.08);
-      --card-strong: rgba(255, 255, 255, 0.12);
-      --line: rgba(255, 255, 255, 0.14);
-      --text: #f8fafc;
-      --sub: #cbd5e1;
-      --brand: #7c3aed;
-      --brand-2: #ec4899;
-      --ok: #22c55e;
-      --shadow: 0 20px 60px rgba(2, 6, 23, .55);
+      --bg: #f7f3ec;
+      --bg-2: #efe7dc;
+      --paper: #fffdf8;
+      --ink: #2e2922;
+      --sub: #6d6256;
+      --line: #ded4c6;
+      --accent: #b68b4a;
+      --accent-soft: #efe2cb;
+      --shadow: 0 14px 40px rgba(75, 56, 26, 0.12);
     }
 
     * { box-sizing: border-box; }
 
-    html, body {
+    body {
       margin: 0;
-      min-height: 100%;
-      background: radial-gradient(1200px 800px at 20% -10%, rgba(124,58,237,.35), transparent 60%),
-                  radial-gradient(900px 600px at 100% 10%, rgba(236,72,153,.25), transparent 55%),
-                  var(--bg);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Microsoft YaHei", sans-serif;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Source Han Sans SC", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(1000px 560px at 120% -10%, rgba(182, 139, 74, 0.15), transparent 58%),
+        radial-gradient(850px 520px at -20% 0%, rgba(208, 178, 127, 0.18), transparent 52%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
     }
 
-    .container {
+    .wrap {
       width: min(100%, 460px);
       margin: 0 auto;
-      padding: 18px 14px 26px;
+      padding: 18px 14px 24px;
     }
 
     .hero {
       position: relative;
       overflow: hidden;
-      border-radius: 24px;
-      padding: 20px 18px 18px;
-      background:
-        linear-gradient(145deg, rgba(124,58,237,.25), rgba(236,72,153,.22)),
-        rgba(15, 23, 42, .65);
-      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: linear-gradient(180deg, rgba(255,255,255,.84), rgba(255,250,240,.88));
+      border: 1px solid #e9dece;
       box-shadow: var(--shadow);
-      backdrop-filter: blur(12px);
+      padding: 20px 16px 16px;
     }
 
-    .glow {
+    .hero::after {
+      content: "";
       position: absolute;
-      width: 180px;
-      height: 180px;
+      right: -48px;
+      top: -48px;
+      width: 165px;
+      height: 165px;
       border-radius: 999px;
-      filter: blur(30px);
-      opacity: .45;
+      background: radial-gradient(circle, rgba(182,139,74,.24), rgba(182,139,74,0));
       pointer-events: none;
     }
 
-    .glow.a { background: #7c3aed; top: -65px; right: -40px; }
-    .glow.b { background: #ec4899; bottom: -70px; left: -55px; }
-
-    .chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
+    .kicker {
+      display: inline-block;
       padding: 6px 11px;
-      border: 1px solid rgba(255,255,255,.24);
       border-radius: 999px;
+      border: 1px solid #d9c7ac;
+      background: #fff7ea;
+      color: #8a6834;
       font-size: 12px;
-      color: #e2e8f0;
-      background: rgba(15, 23, 42, .45);
-    }
-
-    .dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: var(--ok);
-      box-shadow: 0 0 0 6px rgba(34,197,94,.16);
-      flex: 0 0 auto;
+      letter-spacing: .2px;
+      font-weight: 600;
     }
 
     h1 {
-      margin: 14px 0 8px;
-      font-size: 34px;
-      line-height: 1.08;
+      margin: 13px 0 7px;
+      font-size: 33px;
+      line-height: 1.06;
       letter-spacing: .2px;
       font-weight: 800;
+      color: #2d251a;
     }
 
-    .subtitle {
+    .subhead {
       margin: 0;
-      color: var(--sub);
       font-size: 14px;
       line-height: 1.7;
+      color: var(--sub);
     }
 
-    .punch {
-      margin-top: 14px;
-      padding: 13px 14px;
-      border-radius: 14px;
-      background: rgba(15,23,42,.58);
-      border: 1px solid rgba(255,255,255,.15);
+    .quote {
+      margin-top: 13px;
+      border-radius: 13px;
+      background: #fff7ea;
+      border: 1px solid #e7d8be;
+      padding: 11px 12px;
       font-size: 14px;
-      line-height: 1.65;
-      color: #f1f5f9;
+      line-height: 1.7;
+      color: #4c3f31;
     }
 
-    .punch strong {
-      color: #fff;
-      background: linear-gradient(90deg, #c4b5fd, #f9a8d4);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+    .quote strong {
+      color: #6f4f1d;
     }
 
-    .grid {
+    .cards {
       display: grid;
-      gap: 12px;
-      margin-top: 14px;
+      gap: 11px;
+      margin-top: 13px;
     }
 
     .card {
-      border-radius: 18px;
+      border-radius: 16px;
       border: 1px solid var(--line);
-      background: var(--card);
-      backdrop-filter: blur(8px);
-      padding: 15px 14px;
-      box-shadow: 0 10px 28px rgba(2,6,23,.35);
+      background: var(--paper);
+      box-shadow: 0 8px 24px rgba(76, 53, 18, 0.08);
+      padding: 14px 13px;
     }
 
     .card h2 {
       margin: 0 0 8px;
       font-size: 16px;
-      letter-spacing: .2px;
+      line-height: 1.35;
+      color: #2f281f;
     }
 
     .card p {
       margin: 0;
-      color: var(--sub);
       font-size: 14px;
-      line-height: 1.72;
+      line-height: 1.75;
+      color: var(--sub);
     }
 
-    .skills {
-      margin-top: 10px;
+    .list {
+      margin-top: 9px;
       display: grid;
-      gap: 9px;
+      gap: 8px;
     }
 
-    .skill {
-      border: 1px solid rgba(255,255,255,.15);
-      border-radius: 14px;
-      padding: 10px 11px;
-      background: rgba(15,23,42,.45);
+    .item {
+      border-radius: 12px;
+      border: 1px solid #e9dcc8;
+      background: #fffaf1;
+      padding: 9px 10px;
     }
 
-    .skill b {
+    .item b {
       display: block;
       font-size: 14px;
-      margin-bottom: 4px;
+      color: #3d3125;
+      margin-bottom: 3px;
     }
 
-    .skill span {
+    .item span {
       display: block;
-      color: var(--sub);
       font-size: 13px;
       line-height: 1.65;
+      color: #736658;
     }
 
-    .tagline {
-      margin-top: 12px;
-      padding: 11px 12px;
+    .method {
+      margin-top: 9px;
       border-radius: 12px;
-      border: 1px dashed rgba(255,255,255,.24);
-      color: #e2e8f0;
+      border: 1px dashed #dbc8ab;
+      background: #fffaf0;
+      padding: 10px 11px;
       font-size: 13px;
-      line-height: 1.65;
+      line-height: 1.7;
+      color: #5e503f;
     }
 
     .cta {
-      margin-top: 15px;
+      margin-top: 12px;
       display: grid;
       gap: 8px;
     }
 
     .btn {
-      appearance: none;
-      border: none;
-      text-decoration: none;
       text-align: center;
-      border-radius: 12px;
-      padding: 12px 14px;
+      border-radius: 11px;
+      padding: 11px 12px;
       font-size: 14px;
       font-weight: 700;
       letter-spacing: .2px;
-      cursor: default;
     }
 
-    .btn.primary {
+    .btn.main {
+      background: linear-gradient(90deg, #c09a5a, #aa7d34);
       color: #fff;
-      background: linear-gradient(90deg, var(--brand), var(--brand-2));
-      box-shadow: 0 10px 24px rgba(124,58,237,.36);
+      box-shadow: 0 10px 20px rgba(170, 125, 52, 0.22);
     }
 
-    .btn.secondary {
-      color: #e2e8f0;
-      background: rgba(15,23,42,.6);
-      border: 1px solid rgba(255,255,255,.2);
+    .btn.sub {
+      border: 1px solid #dcc8a7;
+      background: #fff8ec;
+      color: #7d6132;
     }
 
     .footer {
-      margin-top: 14px;
       text-align: center;
-      color: #94a3b8;
+      margin-top: 12px;
       font-size: 12px;
+      color: #8c7d6b;
       line-height: 1.6;
-      padding-bottom: 8px;
     }
   </style>
 </head>
 <body>
-  <main class="container">
+  <main class="wrap">
     <section class="hero">
-      <div class="glow a"></div>
-      <div class="glow b"></div>
-
-      <div class="chip"><span class="dot"></span>WELCOME · 个人品牌主页</div>
-      <h1>蕾蕾<span style="opacity:.9;">Lisa</span></h1>
-      <p class="subtitle">10年品牌独立站操盘手｜DTC品牌营销体系｜欧美本土化增长</p>
-
-      <div class="punch">你好，我是蕾蕾Lisa。<strong>我做的不是流量游戏，而是复购系统。</strong><br/>把中国好产品，变成海外用户愿意长期选择的品牌。</div>
+      <span class="kicker">LEILEI LISA · BRAND OPERATOR</span>
+      <h1>蕾蕾Lisa</h1>
+      <p class="subhead">10年品牌独立站操盘手｜DTC品牌营销体系｜欧美本土化增长</p>
+      <div class="quote">你好，我是蕾蕾Lisa。<strong>我做的不是短期流量，而是长期复购系统。</strong>把中国好产品，变成海外用户愿意持续选择的品牌。</div>
     </section>
 
-    <section class="grid">
+    <section class="cards">
       <article class="card">
-        <h2>我在做什么</h2>
-        <p>深耕 ebikes 品牌操盘 10 年，长期专注从首购到复购的增长闭环，覆盖独立站、内容、私域与用户运营体系。</p>
-        <div class="skills">
-          <div class="skill">
+        <h2>我主要做什么</h2>
+        <p>深耕 ebikes 品牌操盘 10 年，专注独立站增长闭环，从首购、复购到用户关系经营，全部以实战结果为导向。</p>
+        <div class="list">
+          <div class="item">
             <b>EDM 邮件营销体系</b>
-            <span>设计自动化生命周期，让邮件不只促销，而是持续经营关系与复购。</span>
+            <span>搭建自动化生命周期，让邮件成为复购引擎，而不是临时促销渠道。</span>
           </div>
-          <div class="skill">
+          <div class="item">
             <b>用户洞察与运营</b>
-            <span>从评论、行为、反馈中识别真实决策点，找到用户愿意买单的核心价值。</span>
+            <span>基于评论、行为与反馈，找到用户真实在意点，优化每一次转化触点。</span>
           </div>
-          <div class="skill">
+          <div class="item">
             <b>Facebook 小组增长</b>
-            <span>搭建高粘性社群，让用户从购买者升级为品牌传播者与共创者。</span>
+            <span>让用户从购买者升级为品牌共创者，持续沉淀信任与传播势能。</span>
           </div>
         </div>
       </article>
 
       <article class="card">
         <h2>我的方法论</h2>
-        <p>不追爆单神话，做可复制的长期增长：定位清晰、内容稳定、关系经营、节奏执行。</p>
-        <div class="tagline">真正有效的出海，不是把广告投出去，而是把品牌种进用户心里。</div>
+        <p>不追爆单神话，做可复制、可沉淀、可复盘的长期增长。</p>
+        <div class="method">定位清晰 · 内容稳定 · 关系经营 · 节奏执行。真正有效的出海，是把品牌种进用户心里。</div>
       </article>
 
       <article class="card">
-        <h2>我的另一面</h2>
-        <p>我是妈妈，更是我自己。<br/>我分享真实操盘经验，也分享踩坑复盘，希望帮你把品牌出海走得更稳、更长久。</p>
+        <h2>关于我自己</h2>
+        <p>我是妈妈，更是我自己。我会持续分享真实操盘经验和踩坑复盘，陪你把品牌出海这件事做得更稳、更久。</p>
         <div class="cta">
-          <div class="btn primary">公众号：#蕾蕾跨境笔记</div>
-          <div class="btn secondary">欢迎关注我，听我唠唠嗑</div>
+          <div class="btn main">公众号：#蕾蕾跨境笔记</div>
+          <div class="btn sub">欢迎关注我，听我唠唠嗑</div>
         </div>
       </article>
     </section>
